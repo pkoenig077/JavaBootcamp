@@ -1,0 +1,4 @@
+
+public enum Category {
+ANIMATED,DRAMA,HORROR,SCIFI,MUSICAL,COMEDY
+}
