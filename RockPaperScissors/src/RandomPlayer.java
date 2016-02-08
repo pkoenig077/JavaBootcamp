@@ -14,6 +14,7 @@ public class RandomPlayer extends Player {
 		} else {
 			Roshambo = RoshamboValue.scissors;
 			System.out.println("Scissors");
+			
 		}
 	}
 
