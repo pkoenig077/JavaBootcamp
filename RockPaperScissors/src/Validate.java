@@ -3,13 +3,12 @@ import java.util.Scanner;
 public class Validate {
 	static Scanner sc = new Scanner(System.in);
 
-
 	/**
 	 * 
 	 * @return a boolean restart checks if inputted string for a yes/no prompt
 	 */
 	public static boolean getRestart() {
-		String prompt = getInput("\nWould you like to restart?\n(Y)es/(N)o");
+		String prompt = getInput("\nWould you like to play again?\n(Y)es/(N)o");
 		boolean restart = true;
 		while (!(prompt.matches("^[YyNn]$") || prompt.equalsIgnoreCase("yes") || prompt.equalsIgnoreCase("no"))) {
 			System.out.println("Error: Invalid Input");
@@ -32,20 +31,25 @@ public class Validate {
 		System.out.println(prompt);
 		return sc.nextLine();
 	}
-/**
- * 
- * @param prompt
- * @return a string for category input
- */
-	public static String getCatInput(String prompt) {
-		String catInput;
-		catInput = getInput(prompt);
-		while(!(catInput.equalsIgnoreCase("Animated")||catInput.equalsIgnoreCase("Comedy")||catInput.equalsIgnoreCase("Drama")||catInput.equalsIgnoreCase("Horror")||catInput.equalsIgnoreCase("Scifi")||catInput.equalsIgnoreCase("musical"))){
-			System.out.println("No movies of that genre, try again: ");
-			catInput = getCatInput(prompt);
+
+	public static String getPlayer2(String prompt) {
+		String input = getInput(prompt);
+		while (!(input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("random"))) {
+			System.out.println("Error: That's not a valid player, try again");
+			input = getInput(prompt);
 		}
-		
-		return catInput;
+
+		return input;
+	}
+
+	public static String getValidRoshambo(String prompt) {
+		String input = getInput(prompt);
+		while (!(input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("paper")
+				|| input.equalsIgnoreCase("scissors"))) {
+			System.out.println("Error: invalid choice. Choose rock, paper, or scissors");
+			getInput(prompt);
+		}
+		return input;
 	}
 
 }

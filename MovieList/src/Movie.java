@@ -5,20 +5,25 @@
  */
 public class Movie implements Comparable {
 	private String Title, Category;
-	
-    @Override
-    public int compareTo(Object comparestu) {
-      int x = -((Movie)comparestu).getTitle().compareTo(Title);
-      //return 0 if equal
-      //returns 1 if greater than
-      //returns -1 otherwise
-      return x;
-    }
+
+	@Override
+	/**
+	 * overrides the compareTo method that is used for comparing objects. Uses
+	 * the title of movie for comparison, sorts alphabetically
+	 */
+	public int compareTo(Object comparestu) {
+		int x = -((Movie) comparestu).getTitle().compareTo(Title);
+		// return 0 if equal
+		// returns 1 if greater than
+		// returns -1 otherwise
+		return x;
+	}
+
 
 	
-	public Movie(String title, String category){
+	public Movie(String title, String category) {
 		setTitle(title);
-		setCategory(category);
+		setCategory(category);//in order to use enum do Category.valueof(String category);
 	}
 
 	/**
@@ -29,7 +34,8 @@ public class Movie implements Comparable {
 	}
 
 	/**
-	 * @param title of movie to be set
+	 * @param title
+	 *            of movie to be set
 	 */
 	public void setTitle(String title) {
 		Title = title;
@@ -43,11 +49,11 @@ public class Movie implements Comparable {
 	}
 
 	/**
-	 * @param set movie category
+	 * @param set
+	 *            movie category
 	 */
 	public void setCategory(String category) {
 		Category = category;
 	}
-	
-	
+
 }
