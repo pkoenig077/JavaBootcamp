@@ -23,7 +23,9 @@ public class MainMovieList {
 		ArrayList<Movie> movieList = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {
 			movieList.add(MovieIO.getMovie(i + 1));
-			Collections.sort(movieList);//sorts the array of Movie objects by comparing titles. sorts alphabetically
+			Collections.sort(movieList);// sorts the array of Movie objects by
+										// comparing titles. sorts
+										// alphabetically
 		}
 		boolean restart = true;
 		while (restart == true) {

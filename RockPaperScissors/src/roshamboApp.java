@@ -14,24 +14,29 @@ public class roshamboApp {
 
 		human1.getName();// prompts for human player's name
 		boolean restart = true;// initalize the restart loop
-
+		String playerName = null;
+		String playerChoice = Validate.getPlayer2("What player do you want to play againts?\n(Random or Rock)");// checks
+																																																		// that
+																																																		// player
+																																																		// 2
+																																																		// is
+																																																		// either
+																																																		// rock
+																																																		// or
+																																																		// random
 		while (restart == true) {
-			String playerChoice = Validate.getPlayer2("What player do you want to play againts?\n(Random or Rock)");// checks
-																													// that
-																													// player
-																													// 2
-																													// is
-																													// either
-																													// rock
-																													// or
-																													// random
+
 			human1.getRoshambo();// prompts for rock paper or scissors
 			if (playerChoice.equalsIgnoreCase("Random")) {
 				random1.getRoshambo();// gets random value from 0-2 then
 										// translates into rock paper or
 										// scissors
+				random1.getName();
+				playerName = random1.Name;
 			} else {
 				rockplayer1.getRoshambo();// gets rock
+				rockplayer1.getName();
+				playerName = rockplayer1.Name;
 			}
 
 			switch (playerChoice.toLowerCase()) {
@@ -79,7 +84,7 @@ public class roshamboApp {
 
 		}
 
-		System.out.println(human1.Name+"\n\tWins: " + wins + "\n\tLosses: " + losses + "\n\tTies: " + ties);
+		System.out.println(human1.Name +" vs "+playerName+ "\n\tWins: " + wins + "\n\tLosses: " + losses + "\n\tTies: " + ties);
 	}
 
 }

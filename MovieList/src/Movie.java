@@ -19,11 +19,10 @@ public class Movie implements Comparable {
 		return x;
 	}
 
-
-	
 	public Movie(String title, String category) {
 		setTitle(title);
-		setCategory(category);//in order to use enum do Category.valueof(String category);
+		setCategory(category);// in order to use enum do Category.valueof(String
+								// category);
 	}
 
 	/**

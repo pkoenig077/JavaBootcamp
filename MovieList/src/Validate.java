@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Validate {
 	static Scanner sc = new Scanner(System.in);
 
-
 	/**
 	 * 
 	 * @return a boolean restart checks if inputted string for a yes/no prompt
@@ -32,19 +31,22 @@ public class Validate {
 		System.out.println(prompt);
 		return sc.nextLine();
 	}
-/**
- * 
- * @param prompt
- * @return a string for category input
- */
+
+	/**
+	 * 
+	 * @param prompt
+	 * @return a string for category input
+	 */
 	public static String getCatInput(String prompt) {
 		String catInput;
 		catInput = getInput(prompt);
-		while(!(catInput.equalsIgnoreCase("Animated")||catInput.equalsIgnoreCase("Comedy")||catInput.equalsIgnoreCase("Drama")||catInput.equalsIgnoreCase("Horror")||catInput.equalsIgnoreCase("Scifi")||catInput.equalsIgnoreCase("musical"))){
+		while (!(catInput.equalsIgnoreCase("Animated") || catInput.equalsIgnoreCase("Comedy")
+				|| catInput.equalsIgnoreCase("Drama") || catInput.equalsIgnoreCase("Horror")
+				|| catInput.equalsIgnoreCase("Scifi") || catInput.equalsIgnoreCase("musical"))) {
 			System.out.println("No movies of that genre, try again: ");
 			catInput = getCatInput(prompt);
 		}
-		
+
 		return catInput;
 	}
 

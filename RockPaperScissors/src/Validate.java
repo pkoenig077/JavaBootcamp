@@ -5,21 +5,20 @@ public class Validate {
 
 	/**
 	 * 
-	 * @return a boolean restart checks if inputted string for a yes/no prompt
+	 * @return a boolean. checks inputted string for a yes/no prompt
 	 */
 	public static boolean getRestart() {
 		String prompt = getInput("\nWould you like to play again?\n(Y)es/(N)o");
-		boolean restart = true;
+
 		while (!(prompt.matches("^[YyNn]$") || prompt.equalsIgnoreCase("yes") || prompt.equalsIgnoreCase("no"))) {
 			System.out.println("Error: Invalid Input");
-			prompt = getInput("\nWould you like to restart?\n(Y)es/(N)o");
+			prompt = getInput("\nWould you like to play again?\n(Y)es/(N)o");
 		}
 		if (prompt.equalsIgnoreCase("y") || prompt.equalsIgnoreCase("yes")) {
-			restart = true;
-		} else if (prompt.equalsIgnoreCase("n") || prompt.equalsIgnoreCase("no")) {
-			restart = false;
-		}
-		return restart;
+			return true;
+		} else 
+			return false;
+		
 
 	}
 
