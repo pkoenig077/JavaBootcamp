@@ -32,6 +32,12 @@ public class Validate {
 		return sc.nextLine();
 	}
 
+	
+	/**
+	 * 
+	 * @param prompt
+	 * @return a string that is either rock or random
+	 */
 	public static String getPlayer2(String prompt) {
 		String input = getInput(prompt);
 		while (!(input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("random"))) {
@@ -41,13 +47,17 @@ public class Validate {
 
 		return input;
 	}
-
+/**
+ * 
+ * @param prompt
+ * @return string that is either rock, paper , or scissors
+ */
 	public static String getValidRoshambo(String prompt) {
 		String input = getInput(prompt);
 		while (!(input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("paper")
 				|| input.equalsIgnoreCase("scissors"))) {
 			System.out.println("Error: invalid choice. Choose rock, paper, or scissors");
-			getInput(prompt);
+			input = getInput(prompt);
 		}
 		return input;
 	}
