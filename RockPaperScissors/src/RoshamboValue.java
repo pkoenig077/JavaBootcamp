@@ -1,4 +1,4 @@
 
 public enum RoshamboValue {
-rock, paper, scissors
+	rock, paper, scissors
 }

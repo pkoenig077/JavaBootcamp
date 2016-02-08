@@ -79,7 +79,7 @@ public class roshamboApp {
 
 		}
 
-		System.out.println("Wins: " + wins + "\n" + "Losses: " + losses + "\n" + "Ties: " + ties);
+		System.out.println(human1.Name+"\n\tWins: " + wins + "\n\tLosses: " + losses + "\n\tTies: " + ties);
 	}
 
 }

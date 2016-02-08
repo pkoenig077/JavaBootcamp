@@ -5,13 +5,11 @@ public class RockPlayer extends Player {
 	public void getRoshambo() {
 		Roshambo = RoshamboValue.rock;
 		System.out.println("Rock");
-		Name = "Rock Player";
 	}
 
 	@Override
 	public void getName() {
-		// TODO Auto-generated method stub
-		
+		Name = "Rock Player";
 	}
 
 }

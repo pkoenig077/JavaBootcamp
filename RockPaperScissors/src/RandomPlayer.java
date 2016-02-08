@@ -2,24 +2,24 @@ import java.util.Random;
 
 public class RandomPlayer extends Player {
 	Random randomGen = new Random();
+
 	@Override
 	public void getRoshambo() {
-		if(randomGen.nextInt(3)==0){
+		if (randomGen.nextInt(3) == 0) {
 			Roshambo = RoshamboValue.rock;
 			System.out.println("Rock");
-		}else if(randomGen.nextInt(3)==1){
+		} else if (randomGen.nextInt(3) == 1) {
 			Roshambo = RoshamboValue.paper;
 			System.out.println("Paper");
-		}else{
+		} else {
 			Roshambo = RoshamboValue.scissors;
 			System.out.println("Scissors");
 		}
-		Name = "Random Player";
 	}
+
 	@Override
 	public void getName() {
-		// TODO Auto-generated method stub
-		
+		Name = "Random Player";
 	}
 
 }

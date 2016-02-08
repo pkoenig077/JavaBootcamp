@@ -32,7 +32,6 @@ public class Validate {
 		return sc.nextLine();
 	}
 
-	
 	/**
 	 * 
 	 * @param prompt
@@ -47,11 +46,12 @@ public class Validate {
 
 		return input;
 	}
-/**
- * 
- * @param prompt
- * @return string that is either rock, paper , or scissors
- */
+
+	/**
+	 * 
+	 * @param prompt
+	 * @return string that is either rock, paper , or scissors
+	 */
 	public static String getValidRoshambo(String prompt) {
 		String input = getInput(prompt);
 		while (!(input.equalsIgnoreCase("rock") || input.equalsIgnoreCase("paper")
