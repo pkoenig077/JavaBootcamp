@@ -65,7 +65,7 @@ public class roshamboApp {
 
 				// case for going against rock
 			case "rock": {
-				if (human1.Roshambo == RoshamboValue.rock) {
+				if (human1.Roshambo == rockplayer1.Roshambo) {
 					System.out.println("Tie");
 					ties++;
 				} else if (human1.Roshambo == RoshamboValue.paper) {

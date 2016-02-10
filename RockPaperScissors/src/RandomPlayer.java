@@ -3,7 +3,7 @@ import java.util.Random;
 public class RandomPlayer extends Player {
 	Random randomGen = new Random();
 
-	@Override
+	
 	public void getRoshambo() {
 		if (randomGen.nextInt(3) == 0) {
 			Roshambo = RoshamboValue.rock;
