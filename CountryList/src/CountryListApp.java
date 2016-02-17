@@ -29,6 +29,7 @@ import javax.swing.JTextPane;
 import javax.swing.JScrollBar;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
 
 public class CountryListApp {
 
@@ -149,6 +150,11 @@ public class CountryListApp {
 		textArea = new JTextArea();
 		textArea.setEditable(false);
 		scrollPane.setViewportView(textArea);
+		
+		JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
+		tglbtnNewToggleButton.setEnabled(false);
+		tglbtnNewToggleButton.setBounds(10, 13, 50, 50);
+		frame.getContentPane().add(tglbtnNewToggleButton);
 		
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
