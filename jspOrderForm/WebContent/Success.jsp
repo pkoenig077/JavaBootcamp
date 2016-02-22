@@ -28,22 +28,25 @@
 	<%
 		String c_name = request.getParameter("c_name");
 		String c_size = request.getParameter("c_size");
-		out.print("<h1>Successful Order</h1>");
+		out.print("<h2>Successful Order</h2>");
 		out.print("<p>" + c_size + " " + c_name + "</p>");
 
 		String options[] = request.getParameterValues("options");
 
 		if (options != null) {
-			out.print("<p>Options: <br><ul>");
+			out.print("<h4>Options</h4>");
+			out.print("<ul class=\"alt\">");
 			for (String option : options)
 				out.print("<li>" + option + "</li>");
-			out.print("</ul></p>");
+			out.print("</ul>");
 		} else {
-			out.print("<p>No Options Selected</p>");
+			out.print("<h4>No Options Selected</h4>");
 		}
 	%>
 	<form method="get" action="Index.jsp">
-		<button type="submit">Return to Order</button>
+	<ul class="actions">
+		<li><button class="button fit" type="submit" id="submit">Return</button></li>
+		</ul>
 	</form>
 </body>
 </html>
