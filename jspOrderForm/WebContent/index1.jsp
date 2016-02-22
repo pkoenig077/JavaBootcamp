@@ -37,15 +37,8 @@
 
 			<!-- Logo -->
 			<div id="logo">
-			<table border =1> 
-				<% String city[]={"Detroit","Chicago","DC","Troy"};%>
-				<%
-for(int i=0;i<city.length;i++){
-out.print("<tr><td>"+city[i]+"</td></tr>");
-}
-%>
-</table>
-				<span>Design by TEMPLATED</span>
+			
+				<span>Coffee Order Form</span>
 			</div>
 
 			<!-- Nav -->

@@ -5,14 +5,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Test JSP stuff</title>
+<title>Coffee Order Form</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href='http://fonts.googleapis.com/css?family=Arimo:400,700'
+	rel='stylesheet' type='text/css'>
+<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<noscript>
+	<link rel="stylesheet" href="css/skel-noscript.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style-desktop.css" />
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 </head>
 <body>
-	<h1>
-		<a href="http://localhost:8080/jpsHelloWorld/page1.jsp">Goodbye
-			World</a>
-	</h1>
 
 	<%
 		Date d = new Date();
@@ -32,32 +45,9 @@
 		}
 		
 	%>
-
-	<table>
-		<%
-			String city[] = null;
-			request.setAttribute("city", city);
-		%>
-		<%
-			try {
-				for (int i = 0; i < city.length; i++) {
-					out.print("<tr><td>" + city[i] + "</td></tr>");
-
-				}
-			} catch (NullPointerException e) {
-				//log error
-				out.print("<h1>Shit broke!</h1>");
-			}
-		%>
-	</table>
-	<table>
-		<cr:forEach var="v" items="${city}">
-			<cr:out value="${v}"></cr:out>
-		</cr:forEach>
-	</table>
 	
 	<form method="get" action="Success.jsp">
-	<h3>Coffee name: </h3><input type="text" name="c_name">
+	<h3>Coffee name: </h3><input type="text" name="c_name" value="Medium Roast">
 	<h3>Coffee Size: </h3>
 	<input type="radio" name="c_size" value="Small"> Small<br>
 	<input type="radio" name="c_size" value="Medium" checked="checked"> Medium<br>
@@ -70,5 +60,6 @@
 	<input type="reset">
 	</form>
 
+	<p><a href="http://localhost:8080/jpsHelloWorld/page1.jsp">Browser Check</a></p>
 </body>
 </html>
