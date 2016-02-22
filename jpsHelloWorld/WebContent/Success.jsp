@@ -10,9 +10,9 @@
 <body>
 	<%
 		String c_name = request.getParameter("c_name");
-		String c_type = request.getParameter("c_type");
+		String c_size = request.getParameter("c_size");
 		out.print("<h1>Successful Order</h1>");
-		out.print("<p>" +c_type +" "+ c_name + "</p>");
+		out.print("<p>" +c_size +" "+ c_name + "</p>");
 
 		String options[] = request.getParameterValues("options");
 		
@@ -27,6 +27,5 @@
 		
 	
 	%>
-
 </body>
 </html>

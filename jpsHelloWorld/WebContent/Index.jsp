@@ -33,7 +33,7 @@
 		
 	%>
 
-	<table border=1>
+	<table>
 		<%
 			String city[] = null;
 			request.setAttribute("city", city);
@@ -57,9 +57,12 @@
 	</table>
 	
 	<form method="get" action="Success.jsp">
-	Coffee name: <input type="text" name="c_name"><br>
-	Coffee type: <input type="text" name="c_type"><br>
-	Coffee Options:<br>
+	<h3>Coffee name: </h3><input type="text" name="c_name">
+	<h3>Coffee Size: </h3>
+	<input type="radio" name="c_size" value="Small"> Small<br>
+	<input type="radio" name="c_size" value="Medium" checked="checked"> Medium<br>
+	<input type="radio" name="c_size" value="Large"> Large<br>
+	<h3>Options:</h3>
 	<input type="checkbox" name="options" value="decaf"> Decaf<br>
 	<input type="checkbox" name="options" value="cream"> Cream<br>
 	<input type="checkbox" name="options" value="sugar"> Sugar<br>
