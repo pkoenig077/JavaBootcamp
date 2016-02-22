@@ -37,10 +37,14 @@
 
 			<!-- Logo -->
 			<div id="logo">
+			<table border =1> 
+				<% String city[]={"Detroit","Chicago","DC","Troy"};%>
 				<%
-Date d = new Date();
-out.print("<h1>"+d.toLocaleString()+"</h1>");
+for(int i=0;i<city.length;i++){
+out.print("<tr><td>"+city[i]+"</td></tr>");
+}
 %>
+</table>
 				<span>Design by TEMPLATED</span>
 			</div>
 
@@ -71,6 +75,7 @@ out.print("<h1>"+d.toLocaleString()+"</h1>");
 						</header>
 						<a href="#" class="image full"><img src="images/pic07.jpg"
 							alt="" /></a>
+							
 						<p>
 							<%
 if(request.getHeader("user-agent").contains("Chrome")){
@@ -81,6 +86,7 @@ out.print("Chrome browser");
 %>
 						</p>
 						<p>${header["user-agent"]}</p>
+						
 					</section>
 				</div>
 
