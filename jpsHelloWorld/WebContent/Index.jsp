@@ -55,6 +55,17 @@
 			<cr:out value="${v}"></cr:out>
 		</cr:forEach>
 	</table>
+	
+	<form method="get" action="Success.jsp">
+	Coffee name: <input type="text" name="c_name"><br>
+	Coffee type: <input type="text" name="c_type"><br>
+	Coffee Options:<br>
+	<input type="checkbox" name="options" value="decaf"> Decaf<br>
+	<input type="checkbox" name="options" value="cream"> Cream<br>
+	<input type="checkbox" name="options" value="sugar"> Sugar<br>
+	<input type="submit">
+	<input type="reset">
+	</form>
 
 </body>
 </html>
