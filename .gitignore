@@ -1,6 +1,7 @@
 #################
 ## Eclipse
 #################
+/Servers/
 ./metadata/
 .recommenders/
 /New folder/
