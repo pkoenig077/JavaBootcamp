@@ -24,11 +24,11 @@
 <body>
 	<header id="header">
 		<h1>
-			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+			<a href="index.jsp">Coffee Delivery by Carrier Pigeon</a>
 		</h1>
 		<nav id="nav">
 			<ul>
-				<li><a href="Index.jsp">Order</a></li>
+				<li><a href="index.jsp">Order</a></li>
 				<li><a href="page1.jsp">Browser Check</a></li>
 				<li>
 					<%

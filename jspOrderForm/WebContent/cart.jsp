@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Coffee Order Complete</title>
+<title>Shopping Cart</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -28,11 +28,11 @@
 <body>
 	<header id="header">
 		<h1>
-			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+			<a href="index.jsp">Coffee Delivery by Carrier Pigeon</a>
 		</h1>
 		<nav id="nav">
 			<ul>
-				<li><a href="Index.jsp">Order</a></li>
+				<li><a href="index.jsp">Order</a></li>
 				<li><a href="page1.jsp">Browser Check</a></li>
 				<li>
 					<%
@@ -48,15 +48,15 @@
 		String c_name = request.getParameter("c_name");
 		String c_size = request.getParameter("c_size");
 		if(c_name==null || c_size==null){
-			response.sendRedirect("Index.jsp");
+			response.sendRedirect("index.jsp");
 		}
-		out.print("<h2>Successful Order</h2>");
+		out.print("<h2>Order: </h2>");
 		out.print("<p>" + c_size + " " + c_name + "</p>");
 
 		String options[] = request.getParameterValues("options");
 
 		if (options != null) {
-			out.print("<h4>Options</h4>");
+			out.print("<h2>With</h2>");
 			out.print("<ul class=\"alt\">");
 			for (String option : options)
 				out.print("<li>" + option + "</li>");
@@ -65,9 +65,9 @@
 			out.print("<h4>No Options Selected</h4>");
 		}
 	%>
-	<form method="get" action="Index.jsp">
+	<form method="get" action="index.jsp">
 		<ul class="actions">
-			<li><button class="button fit" type="submit" id="submit">Return</button></li>
+			<li><button class="button fit" type="submit" id="submit">Check Out</button></li>
 		</ul>
 	</form>
 	</div>

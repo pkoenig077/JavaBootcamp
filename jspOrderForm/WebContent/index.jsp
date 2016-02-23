@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Coffee Order Form</title>
+<title>Coffee Delivery</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -25,7 +25,7 @@
 
 	<header id="header">
 		<h1>
-			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+			<a href="index.jsp">Coffee Delivery by Carrier Pigeon</a>
 		</h1>
 		<nav id="nav">
 			<ul>
@@ -48,39 +48,61 @@
 		</ul>
 	</section>
 	<div class="wrapper style2 align-center">
-		<form method="get" id="Order" action="Success.jsp">
-			<h2 class="">
-				<label for="name">Coffee:</label>
-			</h2>
+		<form method="get" id="Order" action="cart.jsp">
+				<header class="major">
+					<h2>Coffee by Pigeon</h2>
+				</header>
+				<div class="row uniform 50% align-center">
+					<div class="12u$(xsmall)">
+						<select id="name" name="c_name">
+							<option value="Light Roast" selected>Light Roast</option>
+							<option value="Dark Roast">Dark Roast</option>
+							<option value="Cappuccino">Cappuccino</option>
+							<option value="Latte">Latte</option>
+							<option value="Espresso">Espresso</option>
+							<option value="Macchiato">Macchiato</option>
+						</select>
+					</div>
+				</div>
+			<h3>
+				<label for="size">Size:</label>
+			</h3>
+			<ul id="size">
+				<input type="radio" id="small" name="c_size" value="Small">
+				<label for="small">Small</label>
+				<input type="radio" id="medium" name="c_size" value="Medium" checked>
+				<label for="medium">Medium</label>
+				<input type="radio" id="large" name="c_size" value="Large">
+				<label for="large">Large</label>
+			</ul>
+			<h3>
+				<label for="options">Options:</label>
+			</h3>
+			<ul>
+				<input type="checkbox" id="decaf" name="options" value="Decaf">
+				<label for="decaf">Decaf</label>
+				<input type="checkbox" id="cream" name="options" value="Cream">
+				<label for="cream">Cream</label>
+				<input type="checkbox" id="sugar" name="options" value="Sugar">
+				<label for="sugar">Sugar</label>
 
-			<input type="text" id="name" name="c_name" value="Medium Roast"><br>
-			<h3>
-				<label for="size">Coffee Size:</label>
-			</h3>
-			<div class="">
-				<ul id="size">
-					<input type="radio" id="small" name="c_size" value="Small">
-					<label for="small">Small</label>
-					<input type="radio" id="medium" name="c_size" value="Medium"
-						checked>
-					<label for="medium">Medium</label>
-					<input type="radio" id="large" name="c_size" value="Large">
-					<label for="large">Large</label>
-				</ul>
-			</div>
-			<h3>
-				<label for="Extra Options">Options:</label>
-			</h3>
-			<div id="Extra Options">
-				<ul class="alt">
-					<li><input type="checkbox" id="decaf" name="options"
-						value="Decaf"> <label for="decaf">Decaf</label></li>
-					<li><input type="checkbox" id="cream" name="options"
-						value="Cream"> <label for="cream">Cream</label></li>
-					<li><input type="checkbox" id="sugar" name="options"
-						value="Sugar"> <label for="sugar">Sugar</label></li>
-				</ul>
-			</div>
+				<input type="checkbox" id="espresso" name="options"
+					value="Shot of Espresso">
+				<label for="espresso">Shot of Espresso</label>
+
+				<input type="checkbox" id="milk" name="options" value="Milk">
+				<label for="milk">Milk</label>
+				<input type="checkbox" id="almond" name="options"
+					value="Almond Milk">
+				<label for="almond">Almond Milk</label>
+				<input type="checkbox" id="chocolate" name="options"
+					value="Chocolate">
+				<label for="chocolate">Chocolate</label>
+				<input type="checkbox" id="vanilla" name="options" value="Vanilla">
+				<label for="vanilla">Vanilla</label>
+				<input type="checkbox" id="caramel" name="options" value="Caramel">
+				<label for="caramel">Caramel</label>
+			</ul>
 			<input type="submit"> <input type="reset">
 		</form>
 	</div>
@@ -148,11 +170,21 @@
 			<ul class="copyright">
 				<li>
 					<%
-						out.print("<h1>" + d.toLocaleString() + "</h1>");
+						out.print(d.toLocaleString() + " (GMT-5)");
 					%>
 				</li>
 				<li><a href="http://localhost:8080/jspOrderForm/page1.jsp">Browser
 						Check</a></li>
+				<li>
+					<%
+						if (application.getAttribute("gcounter") == null)//initalize counter on first visit
+							application.setAttribute("gcounter", 0);
+						Integer gcounter = (Integer) application.getAttribute("gcounter");
+						gcounter++;
+						application.setAttribute("gcounter", gcounter);
+						out.print(gcounter + " Views");
+					%>
+				</li>
 			</ul>
 		</div>
 	</footer>
