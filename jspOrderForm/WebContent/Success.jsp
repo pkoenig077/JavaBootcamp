@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*"%>
 <%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -25,6 +26,23 @@
 <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 </head>
 <body>
+	<header id="header">
+		<h1>
+			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="Index.jsp">Order</a></li>
+				<li><a href="page1.jsp">Browser Check</a></li>
+				<li>
+					<%
+						Date d = new Date();
+						out.print(d.toLocaleString());
+					%>
+				</li>
+			</ul>
+		</nav>
+	</header>
 	<%
 		String c_name = request.getParameter("c_name");
 		String c_size = request.getParameter("c_size");
@@ -44,8 +62,8 @@
 		}
 	%>
 	<form method="get" action="Index.jsp">
-	<ul class="actions">
-		<li><button class="button fit" type="submit" id="submit">Return</button></li>
+		<ul class="actions">
+			<li><button class="button fit" type="submit" id="submit">Return</button></li>
 		</ul>
 	</form>
 </body>

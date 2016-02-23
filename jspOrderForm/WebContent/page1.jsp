@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*"%>
+<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,19 +22,37 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
 <body>
-<div>
-<h1>
-<%
-if(request.getHeader("user-agent").contains("Chrome")){
-out.print("Chrome browser");
-}else if(request.getHeader("user-agent").contains("Mozilla")){
-	out.print("Mozilla browser");
-}else out.print("What are you even using?");
-%>
-</h1>
-</div>
-<div>
-<p>${header["user-agent"]}</p>
-</div>
+	<header id="header">
+		<h1>
+			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="Index.jsp">Order</a></li>
+				<li><a href="page1.jsp">Browser Check</a></li>
+				<li>
+					<%
+						Date d = new Date();
+						out.print(d.toLocaleString());
+					%>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div>
+		<h1>
+			<%
+				if (request.getHeader("user-agent").contains("Chrome")) {
+					out.print("Chrome browser");
+				} else if (request.getHeader("user-agent").contains("Mozilla")) {
+					out.print("Mozilla browser");
+				} else
+					out.print("What are you even using?");
+			%>
+		</h1>
+	</div>
+	<div>
+		<p>${header["user-agent"]}</p>
+	</div>
 </body>
 </html>

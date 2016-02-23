@@ -22,61 +22,130 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
 <body>
-
-	<%
-		Date d = new Date();
-		out.print("<h1>" + d.toLocaleString() + "</h1>");
-	%>
-	<%
-		Random r = new Random();
-		int rInt = r.nextInt(10);
-		if (rInt > 5) {
-			out.print("<h2>Lucky</h2>");
-
-			if (rInt == 9) {
-				out.print("<h1>Bonus points!</h1>");
-			}
-		} else {
-			out.print("<h2>Unlucky</h2>");
-		}
-	%>
+	<header id="header">
+		<h1>
+			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="Index.jsp">Order</a></li>
+				<li><a href="page1.jsp">Browser Check</a></li>
+				<li>
+					<%
+						Date d = new Date();
+						out.print(d.toLocaleString());
+					%>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<section id="banner">
+		<h2>The Best Coffee You'll Ever Have:</h2>
+		<p>Delivered By Carrier Pidgeon</p>
+		<ul class="actions">
+			<li><a href="#footer" class="button big">Learn More</a></li>
+		</ul>
+	</section>
 	<div class="container">
 		<form method="get" action="Success.jsp">
-			<h3>Coffee name:</h3>
-			<input type="text" name="c_name" value="Medium Roast">
-			<h3>Coffee Size:</h3>
-			<div class="4u 12u$(small)">
+			<h3>
+				<label for="name">Coffee:</label>
+			</h3>
+			<input type="text" id="name" name="c_name" value="Medium Roast"><br>
+			<h3>
+				<label for="size">Coffee Size:</label>
+			</h3>
+			<ul id="size">
 				<input type="radio" id="small" name="c_size" value="Small">
 				<label for="small">Small</label>
-			</div>
-			<div class="4u 12u$(small)">
 				<input type="radio" id="medium" name="c_size" value="Medium" checked>
 				<label for="medium">Medium</label>
-			</div>
-			<div class="4u$ 12u$(small)">
 				<input type="radio" id="large" name="c_size" value="Large">
 				<label for="large">Large</label>
-			</div>
-			<h3>Options:</h3>
-			<div class="6u 12u$(small)">
-				<input type="checkbox" id="decaf" name="options" value="Decaf"> <label
-					for="decaf">Decaf</label>
-			</div>
-			<div class="6u 12u$(small)">
-				<input type="checkbox" id="cream" name="options" value="Cream"> <label
-					for="cream">Cream</label>
-			</div>
-			<div class="6u 12u$(small)">
-				<input type="checkbox" id="sugar" name="options" value="Sugar"> <label
-					for="sugar">Sugar</label>
+			</ul>
+			<h3>
+				<label for="Extra Options">Options:</label>
+			</h3>
+			<div id="Extra Options">
+				<ul class="alt">
+					<li><input type="checkbox" id="decaf" name="options"
+						value="Decaf"> <label for="decaf">Decaf</label></li>
+					<li><input type="checkbox" id="cream" name="options"
+						value="Cream"> <label for="cream">Cream</label></li>
+					<li><input type="checkbox" id="sugar" name="options"
+						value="Sugar"> <label for="sugar">Sugar</label></li>
+				</ul>
 			</div>
 			<input type="submit"> <input type="reset">
 		</form>
 	</div>
 
-	<p>
-		<a href="http://localhost:8080/jspHelloWorld/page1.jsp">Browser
-			Check</a>
-	</p>
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<section class="4u 6u(medium) 12u$(small)">
+					<h3>
+						<a href="http://localhost:8080/jspOrderForm/page1.jsp">Browser
+							Check</a>
+					</h3>
+
+					<ul class="alt">
+						<li>
+							<%
+								out.print("<h1>" + d.toLocaleString() + "</h1>");
+							%>
+						</li>
+					</ul>
+				</section>
+				<section class="4u 6u$(medium) 12u$(small)">
+					<h3>Today's Luck Forecast</h3>
+
+					<ul class="alt">
+						<%
+							Random r = new Random();
+							int rInt = r.nextInt(10);
+							if (rInt > 5) {
+								out.print("<li><h3>Lucky</h3></li>");
+
+								if (rInt == 9) {
+									out.print("<li><h1>Bonus points!</h1></li>");
+								}
+							} else {
+								out.print("<li><h2>Unlucky</h2></li>");
+							}
+						%>
+					</ul>
+				</section>
+				<section class="4u$ 12u$(medium) 12u$(small)">
+					<h3>Contact Us</h3>
+					<ul class="icons">
+						<li><a href="#" class="icon rounded fa-twitter"><span
+								class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon rounded fa-facebook"><span
+								class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon rounded fa-pinterest"><span
+								class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon rounded fa-google-plus"><span
+								class="label">Google+</span></a></li>
+						<li><a href="#" class="icon rounded fa-linkedin"><span
+								class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="tabular">
+
+						<li>
+							<h3>Mail</h3> <a href="#">pkoenig077@gmail.com</a>
+						</li>
+						<li>
+							<h3>Phone</h3> (248) 882-3315
+						</li>
+					</ul>
+				</section>
+			</div>
+			<ul class="copyright">
+				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+				<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
