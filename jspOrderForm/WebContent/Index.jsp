@@ -22,14 +22,15 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
 <body>
+
 	<header id="header">
 		<h1>
 			<a href="Index.jsp">The Best Coffee This World Has Ever Seen</a>
 		</h1>
 		<nav id="nav">
 			<ul>
-				<li><a href="Index.jsp">Order</a></li>
-				<li><a href="page1.jsp">Browser Check</a></li>
+				<li><a href="#Order">Order</a></li>
+				<li><a href="#footer">About Us</a></li>
 				<li>
 					<%
 						Date d = new Date();
@@ -41,28 +42,32 @@
 	</header>
 	<section id="banner">
 		<h2>The Best Coffee You'll Ever Have:</h2>
-		<p>Delivered By Carrier Pidgeon</p>
+		<p>Delivered By Carrier Pigeon</p>
 		<ul class="actions">
 			<li><a href="#footer" class="button big">Learn More</a></li>
 		</ul>
 	</section>
-	<div class="container">
-		<form method="get" action="Success.jsp">
-			<h3>
+	<div class="wrapper style2 align-center">
+		<form method="get" id="Order" action="Success.jsp">
+			<h2 class="">
 				<label for="name">Coffee:</label>
-			</h3>
+			</h2>
+
 			<input type="text" id="name" name="c_name" value="Medium Roast"><br>
 			<h3>
 				<label for="size">Coffee Size:</label>
 			</h3>
-			<ul id="size">
-				<input type="radio" id="small" name="c_size" value="Small">
-				<label for="small">Small</label>
-				<input type="radio" id="medium" name="c_size" value="Medium" checked>
-				<label for="medium">Medium</label>
-				<input type="radio" id="large" name="c_size" value="Large">
-				<label for="large">Large</label>
-			</ul>
+			<div class="">
+				<ul id="size">
+					<input type="radio" id="small" name="c_size" value="Small">
+					<label for="small">Small</label>
+					<input type="radio" id="medium" name="c_size" value="Medium"
+						checked>
+					<label for="medium">Medium</label>
+					<input type="radio" id="large" name="c_size" value="Large">
+					<label for="large">Large</label>
+				</ul>
+			</div>
 			<h3>
 				<label for="Extra Options">Options:</label>
 			</h3>
@@ -84,17 +89,12 @@
 		<div class="container">
 			<div class="row">
 				<section class="4u 6u(medium) 12u$(small)">
-					<h3>
-						<a href="http://localhost:8080/jspOrderForm/page1.jsp">Browser
-							Check</a>
-					</h3>
+					<h3>About Us</h3>
 
 					<ul class="alt">
-						<li>
-							<%
-								out.print("<h1>" + d.toLocaleString() + "</h1>");
-							%>
-						</li>
+						<li>This is some mad placeholder text</li>
+						<li>Eventually this will have information</li>
+						<li>About Carrier Pigeons</li>
 					</ul>
 				</section>
 				<section class="4u 6u$(medium) 12u$(small)">
@@ -144,6 +144,15 @@
 			<ul class="copyright">
 				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
 				<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+			</ul>
+			<ul class="copyright">
+				<li>
+					<%
+						out.print("<h1>" + d.toLocaleString() + "</h1>");
+					%>
+				</li>
+				<li><a href="http://localhost:8080/jspOrderForm/page1.jsp">Browser
+						Check</a></li>
 			</ul>
 		</div>
 	</footer>

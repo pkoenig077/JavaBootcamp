@@ -43,9 +43,13 @@
 			</ul>
 		</nav>
 	</header>
+	<div class="wrapper style2 align-center">
 	<%
 		String c_name = request.getParameter("c_name");
 		String c_size = request.getParameter("c_size");
+		if(c_name==null || c_size==null){
+			response.sendRedirect("Index.jsp");
+		}
 		out.print("<h2>Successful Order</h2>");
 		out.print("<p>" + c_size + " " + c_name + "</p>");
 
@@ -66,5 +70,6 @@
 			<li><button class="button fit" type="submit" id="submit">Return</button></li>
 		</ul>
 	</form>
+	</div>
 </body>
 </html>

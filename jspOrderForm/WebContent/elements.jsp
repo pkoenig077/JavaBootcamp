@@ -26,18 +26,20 @@
 	<body>
 
 		<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Interphase</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+	<header id="header">
+		<h1>
+			<a href="index.html">Interphase</a>
+		</h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="generic.html">Generic</a></li>
+				<li><a href="elements.html">Elements</a></li>
+			</ul>
+		</nav>
+	</header>
 
-		<!-- Main -->
+	<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="container">
 
