@@ -49,9 +49,10 @@
 	</section>
 	<div class="wrapper style2 align-center">
 		<form method="get" id="Order" action="cart.jsp">
-				<header class="major">
-					<h2>Coffee by Pigeon</h2>
-				</header>
+			<header class="major">
+				<h2>Coffee by Pigeon</h2>
+			</header>
+			<div class="wrapper style 2 align-center">
 				<div class="row uniform 50% align-center">
 					<div class="12u$(xsmall)">
 						<select id="name" name="c_name">
@@ -64,6 +65,7 @@
 						</select>
 					</div>
 				</div>
+			</div>
 			<h3>
 				<label for="size">Size:</label>
 			</h3>
