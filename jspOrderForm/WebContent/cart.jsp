@@ -43,7 +43,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="wrapper style2 align-center">
+	<div id="banner" class="align-center">
 	<%
 		String c_name = request.getParameter("c_name");
 		String c_size = request.getParameter("c_size");
@@ -67,7 +67,8 @@
 	%>
 	<form method="get" action="index.jsp">
 		<ul class="actions">
-			<li><button class="button fit" type="submit" id="submit">Check Out</button></li>
+			<li><button class="button fit" type="button" id="return">Return to Order Form</button></li>
+			<li><button class="button fit" type="button" id="checkout">Check Out</button></li>
 		</ul>
 	</form>
 	</div>

@@ -52,19 +52,21 @@
 			<header class="major">
 				<h2>Coffee by Pigeon</h2>
 			</header>
-			<div class="wrapper style 2 align-center">
-				<div class="row uniform 50% align-center">
-					<div class="12u$(xsmall)">
-						<select id="name" name="c_name">
-							<option value="Light Roast" selected>Light Roast</option>
-							<option value="Dark Roast">Dark Roast</option>
-							<option value="Cappuccino">Cappuccino</option>
-							<option value="Latte">Latte</option>
-							<option value="Espresso">Espresso</option>
-							<option value="Macchiato">Macchiato</option>
-						</select>
-					</div>
+			<div class="container 50%">
+			
+				<div class="12u$(xsmall) align-center select-wrapper">
+					
+					<select id="name" name="c_name">
+						<option value="Light Roast" selected>Light Roast</option>
+						<option value="Dark Roast">Dark Roast</option>
+						<option value="Cappuccino">Cappuccino</option>
+						<option value="Latte">Latte</option>
+						<option value="Espresso">Espresso</option>
+						<option value="Macchiato">Macchiato</option>
+					</select>
+
 				</div>
+			
 			</div>
 			<h3>
 				<label for="size">Size:</label>
