@@ -1,0 +1,4 @@
+
+public enum DoorPos {
+FRONT_RIGHT, FRONT_LEFT, REAR_RIGHT, REAR_LEFT, BACK
+}
